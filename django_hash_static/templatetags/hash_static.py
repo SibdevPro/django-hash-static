@@ -15,7 +15,10 @@ class HashStaticNode(StaticNode):
         path = self.path.resolve(context)
         if path not in HASH_STATIC_FILES:
             absolute_path = '{}/{}'.format(settings.STATIC_ROOT, path)
-            HASH_STATIC_FILES[path] = hashlib.md5(open(absolute_path, 'rb').read()).hexdigest()
+            try:
+                HASH_STATIC_FILES[path] = hashlib.md5(open(absolute_path, 'rb').read()).hexdigest()
+            except:
+                HASH_STATIC_FILES[path] = ''
 
         return '{}?hash={}'.format(self.handle_simple(path), HASH_STATIC_FILES[path])
 
