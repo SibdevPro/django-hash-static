@@ -9,7 +9,7 @@ long_description = open(os.path.join(os.path.dirname(__file__),
 
 setup(
       name='django-hash-static',
-      version='0.1',
+      version='1.0.2',
       author='sibdev',
       author_email='a@sibdev.pro',
 
