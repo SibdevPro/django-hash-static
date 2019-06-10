@@ -17,7 +17,7 @@ Django_hash_static - это Django-приложение, которое доба
 
 ## Установка
 
-1. ```pip install git+https://github.com/SibdevPro/django-hash-static.git@1.0.1```
+1. ```pip install git+https://github.com/SibdevPro/django-hash-static.git@1.0.2```
 2. Добавить 'django_hash_static' в INSTALLED_APPS
 3. Не забыть добавить STATIC_ROOT в settings.py
 
